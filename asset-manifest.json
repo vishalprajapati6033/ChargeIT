@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/ChargeIT/static/css/main.83a78c43.css",
+    "main.js": "/ChargeIT/static/js/main.5ea8575a.js",
+    "static/js/453.b4ad4fc0.chunk.js": "/ChargeIT/static/js/453.b4ad4fc0.chunk.js",
+    "static/media/bg.jpg": "/ChargeIT/static/media/bg.80f3d719e2b86d3a641c.jpg",
+    "static/media/charging port.jpg": "/ChargeIT/static/media/charging port.ab82f4d67caf61eeb743.jpg",
+    "static/media/car_black.jpg": "/ChargeIT/static/media/car_black.657fd1a08620226a6780.jpg",
+    "static/media/resume journy.jpg": "/ChargeIT/static/media/resume journy.fd4a423443cb6c65630e.jpg",
+    "static/media/station_vytilla.jpg": "/ChargeIT/static/media/station_vytilla.109d4b690a81ac894fec.jpg",
+    "static/media/Battery swap.jpg": "/ChargeIT/static/media/Battery swap.0d21c345e5f446e76577.jpg",
+    "static/media/station_fort.jpg": "/ChargeIT/static/media/station_fort.7ab9b34befd7c00ff6b5.jpg",
+    "static/media/station_edapally.jpg": "/ChargeIT/static/media/station_edapally.f15ab6f3ea69452bfb7f.jpg",
+    "static/media/station_kalamassery.jpg": "/ChargeIT/static/media/station_kalamassery.2e6e358c9d8564758eac.jpg",
+    "static/media/logo.png": "/ChargeIT/static/media/logo.3f4348e287804e68d94d.png",
+    "static/media/vector-location-icon.jpg": "/ChargeIT/static/media/vector-location-icon.4679d8c218e58e25b4b2.jpg",
+    "static/media/battery-swap.jpg": "/ChargeIT/static/media/battery-swap.4c6c81eefd81477b53ba.jpg",
+    "static/media/car_white2.jpg": "/ChargeIT/static/media/car_white2.7ce63214b9562cf56c65.jpg",
+    "static/media/authentication-symbol.jpg": "/ChargeIT/static/media/authentication-symbol.5ff36eda1756ede936c8.jpg",
+    "static/media/car_white.webp": "/ChargeIT/static/media/car_white.055612269fb9d0fada59.webp",
+    "static/media/car_black2.jpg": "/ChargeIT/static/media/car_black2.7ed63ab843c8a63aa5cf.jpg",
+    "index.html": "/ChargeIT/index.html",
+    "main.83a78c43.css.map": "/ChargeIT/static/css/main.83a78c43.css.map",
+    "main.5ea8575a.js.map": "/ChargeIT/static/js/main.5ea8575a.js.map",
+    "453.b4ad4fc0.chunk.js.map": "/ChargeIT/static/js/453.b4ad4fc0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83a78c43.css",
+    "static/js/main.5ea8575a.js"
+  ]
+}
