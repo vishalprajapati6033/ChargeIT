@@ -1,0 +1,76 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Helper functions
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+    
+    function isAdmin() {
+      return isAuthenticated();
+    }
+    
+    function isStationOwner() {
+      return isAuthenticated() && 
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'stationOwner';
+    }
+    
+    function isUser() {
+      return isAuthenticated() && 
+        exists(/databases/$(database)/documents/users/$(request.auth.uid)) &&
+        get(/databases/$(database)/documents/users/$(request.auth.uid)).data.role == 'user';
+    }
+
+    // Users collection
+    match /users/{userId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated();
+      allow delete: if isAdmin();
+    }
+
+    // Stations collection
+    match /stations/{stationId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated();
+      allow delete: if isAdmin();
+    }
+
+    // Bookings collection
+    match /bookings/{bookingId} {
+      allow read: if isAuthenticated() && (
+        isAdmin() ||
+        isStationOwner() ||
+        resource.data.userId == request.auth.uid
+      );
+      allow create: if isUser();
+      allow update: if isAuthenticated() && (
+        isAdmin() ||
+        (isStationOwner() && resource.data.stationId in get(/databases/$(database)/documents/users/$(request.auth.uid)).data.stations) ||
+        (resource.data.userId == request.auth.uid && request.resource.data.diff(resource.data).affectedKeys().hasOnly(['status', 'cancellationReason']))
+      );
+      allow delete: if isAdmin() || resource.data.userId == request.auth.uid;
+    }
+
+    // Battery Bookings collection
+    match /batteryBookings/{bookingId} {
+      allow read: if isAuthenticated();
+      allow create: if isAuthenticated();
+      allow update: if isAuthenticated() && (
+        isAdmin() ||
+        resource.data.userId == request.auth.uid
+      );
+      allow delete: if isAdmin() || resource.data.userId == request.auth.uid;
+    }
+
+    // Feedback collection
+    match /feedback/{feedbackId} {
+      allow read: if isAuthenticated();
+      allow create: if isUser();
+      allow update: if isAdmin();
+      allow delete: if isAdmin();
+    }
+  }
+} 
