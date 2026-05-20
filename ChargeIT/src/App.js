@@ -46,7 +46,7 @@ const App = () => {
   return (
     <AuthProvider>
       <Toaster position="top-right" />
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <ScrollToTop />
         <Routes>
           {/* Public Routes */}
