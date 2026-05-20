@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ChargeIT/static/css/main.83a78c43.css",
-    "main.js": "/ChargeIT/static/js/main.5ea8575a.js",
+    "main.js": "/ChargeIT/static/js/main.7b22ac79.js",
     "static/js/453.b4ad4fc0.chunk.js": "/ChargeIT/static/js/453.b4ad4fc0.chunk.js",
     "static/media/bg.jpg": "/ChargeIT/static/media/bg.80f3d719e2b86d3a641c.jpg",
     "static/media/charging port.jpg": "/ChargeIT/static/media/charging port.ab82f4d67caf61eeb743.jpg",
@@ -21,11 +21,11 @@
     "static/media/car_black2.jpg": "/ChargeIT/static/media/car_black2.7ed63ab843c8a63aa5cf.jpg",
     "index.html": "/ChargeIT/index.html",
     "main.83a78c43.css.map": "/ChargeIT/static/css/main.83a78c43.css.map",
-    "main.5ea8575a.js.map": "/ChargeIT/static/js/main.5ea8575a.js.map",
+    "main.7b22ac79.js.map": "/ChargeIT/static/js/main.7b22ac79.js.map",
     "453.b4ad4fc0.chunk.js.map": "/ChargeIT/static/js/453.b4ad4fc0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.83a78c43.css",
-    "static/js/main.5ea8575a.js"
+    "static/js/main.7b22ac79.js"
   ]
 }
